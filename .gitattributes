@@ -4,3 +4,5 @@
 # added for the triage skill: scripts run on Linux runners
 *.py    text eol=lf
 *.yml   text eol=lf
+
+.github/workflows/*.lock.yml linguist-generated=true

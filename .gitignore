@@ -37,3 +37,4 @@ result-*
 __pycache__/
 .pytest_cache/
 *.pyc
+.github/aw/logs/
