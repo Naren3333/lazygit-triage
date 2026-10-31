@@ -52,7 +52,7 @@ permissions:
 
 engine:
   id: copilot
-  model: claude-haiku-5.5
+  model: gpt-6-luna
 max-turns: 15
 timeout-minutes: 8
 
@@ -110,4 +110,4 @@ You can act only through safe outputs: `add_labels` and `add_comment` on
 issue #${{ github.event.issue.number || inputs.issue_number }} (always pass
 that item number), or `noop`. When unsure, use the `needs-triage` label.
 
-Run facts: model `claude-haiku-5.5`, run id `${{ github.run_id }}`.
+Run facts: model `gpt-6-luna`, run id `${{ github.run_id }}`.
