@@ -1,0 +1,7 @@
+# Agent configuration, policy and evaluation need the owner's review.
+/.github/       @Naren3333
+/.claude/       @Naren3333
+/AGENTS.md      @Naren3333
+/evals/         @Naren3333
+/go.mod         @Naren3333
+/go.sum         @Naren3333
