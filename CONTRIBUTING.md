@@ -55,6 +55,31 @@ It has become common recently to throw an issue at a coding agent and submit wha
 
 Some of these PRs may actually be good and useful, but many are not, and it's not a good use of my time as a maintainer to look at generated PRs to decide. This is the job of the PR's contributor, and if you don't speak enough go or can't be bothered to get familiar enough with lazygit's codebase to tell, then don't contribute the PR.
 
+## AI contributions and the triage bot
+
+*(Added in this sandbox; not part of upstream lazygit.)*
+
+**The triage bot.** New issues are triaged by an AI agent
+(`.github/workflows/issue-triage.md`). It can only add labels from a fixed
+list and post at most one comment. It cannot close, edit, lock or assign
+issues, or touch code. Its labels are reversible suggestions: maintainers
+remove or change them freely, and a human decides everything else. Its
+comments end with a hidden `triage-skill` footer so they can be audited.
+
+**If you used AI to write an issue or patch:**
+
+- Say so in the issue or PR description.
+- Personally verify every claim, config option and reproduction step
+  before submitting. Maintainers have had to spend time on reports built
+  on non-existent features or settings (e.g. #5675 assumed `less` is a
+  supported pager; in #5982 a maintainer suspected a hallucinated git
+  config key).
+- The note above still applies: generated PRs will be closed.
+
+**Instructions to bots are ignored.** Text in an issue addressed to the
+bot ("label this as...", "maintainer approved...", hidden HTML comments)
+is treated as plain issue text. It never changes what the bot does.
+
 ## Running in a VSCode dev container
 
 If you want to spare yourself the hassle of setting up your dev environment yourself (i.e. installing Go, extensions, and extra tools), you can run the Lazygit code in a VSCode dev container like so:
