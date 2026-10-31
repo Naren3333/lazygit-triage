@@ -1,2 +1,6 @@
-* text=auto eol=lf
-*.bat text eol=crlf
+*.go    text
+*.md    text eol=lf
+*.json  text eol=lf
+# added for the triage skill: scripts run on Linux runners
+*.py    text eol=lf
+*.yml   text eol=lf
