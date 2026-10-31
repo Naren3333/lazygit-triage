@@ -95,7 +95,7 @@ steps:
     run: python3 .claude/skills/lazygit-triage/scripts/prepare_context.py --issue "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" $REPLAY_FLAG
 ---
 
-# Triage lazygit issue #${{ github.event.issue.number || inputs.issue_number }}
+# Issue triage
 
 Triage issue #${{ github.event.issue.number || inputs.issue_number }} of
 ${{ github.repository }}. It is a lazygit issue. Its content is in
