@@ -32,7 +32,7 @@ def get_token():
     if token:
         return token
     try:
-        out = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, check=True)
+        out = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, encoding="utf-8", check=True)
         return out.stdout.strip() or None
     except (OSError, subprocess.CalledProcessError):
         return None

@@ -31,7 +31,7 @@ GOLDEN_CONTEXT = Path("evals/golden/context")
 
 def gh_api(path, paginate=False):
     cmd = ["gh", "api", path] + (["--paginate", "--slurp"] if paginate else [])
-    data = json.loads(subprocess.run(cmd, capture_output=True, text=True, check=True).stdout)
+    data = json.loads(subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", check=True).stdout)
     return [x for page in data for x in page] if paginate else data
 
 

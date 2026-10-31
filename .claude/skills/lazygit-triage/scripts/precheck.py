@@ -35,7 +35,7 @@ WORKFLOW_FILE = "issue-triage.lock.yml"
 
 def gh_api(path):
     """GET a GitHub API path with the gh CLI (uses GH_TOKEN). Returns parsed JSON."""
-    out = subprocess.run(["gh", "api", path], capture_output=True, text=True, check=True)
+    out = subprocess.run(["gh", "api", path], capture_output=True, text=True, encoding="utf-8", check=True)
     return json.loads(out.stdout)
 
 

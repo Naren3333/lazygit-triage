@@ -80,7 +80,7 @@ def build_index(repo):
     """All issues (not PRs) of repo via `gh api --paginate`. Needs gh + token."""
     out = subprocess.run(
         ["gh", "api", "--paginate", "--slurp", f"repos/{repo}/issues?state=all&per_page=100"],
-        capture_output=True, text=True, check=True).stdout
+        capture_output=True, text=True, encoding="utf-8", check=True).stdout
     # --slurp wraps the pages in one outer array: [[page1...], [page2...]].
     issues = [i for page in json.loads(out) for i in page]
     return [{"number": i["number"], "title": i["title"],
