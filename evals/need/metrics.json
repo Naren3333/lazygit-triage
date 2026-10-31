@@ -1,0 +1,19 @@
+{
+  "window": [
+    "2026-04-01T00:00:00Z",
+    "2026-10-01T00:00:00Z"
+  ],
+  "issues": 181,
+  "external": 176,
+  "external_never_maintainer_comment": 61,
+  "external_never_pct": 34.7,
+  "first_reply_hours_median": 3.0,
+  "first_reply_hours_p90": 148.8,
+  "still_open": 100,
+  "label_counts": {
+    "bug": 73,
+    "enhancement": 72,
+    "discussion": 6
+  },
+  "pulled_at": "2026-10-31T13:53:28Z"
+}
