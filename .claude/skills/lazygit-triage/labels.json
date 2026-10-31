@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "limits": {"max_total": 4, "type_exactly": 1, "area_max": 2},
+  "labels": {
+    "bug": {
+      "kind": "type", "color": "d73a4a",
+      "definition": "lazygit behaves incorrectly: crash, wrong result, broken keybinding, regression.",
+      "positive": "Pressing space on a file in a bare repo panics with nil pointer.",
+      "negative": "It would be nice if space also staged whole directories (that is enhancement)."
+    },
+    "enhancement": {
+      "kind": "type", "color": "a2eeef",
+      "definition": "Request for new behaviour or a change to working behaviour.",
+      "positive": "Add an option to show commit graph in the files panel.",
+      "negative": "Commit graph is drawn with wrong colours since v0.50 (that is a bug)."
+    },
+    "question": {
+      "kind": "type", "color": "d876e3",
+      "definition": "User asks how to do something or how to install/configure; no defect claimed.",
+      "positive": "How do I install lazygit with apt on Ubuntu 24.04?",
+      "negative": "lazygit crashes after I installed it with apt (that is a bug)."
+    },
+    "docs": {
+      "kind": "type", "color": "0075ca",
+      "definition": "Documentation is wrong, missing or unclear.",
+      "positive": "Config.md lists a key `gui.foo` that does not exist.",
+      "negative": "I could not find how to do X, please add feature X (enhancement)."
+    },
+    "windows": {
+      "kind": "area", "color": "bfdadc",
+      "definition": "Problem or request specific to Windows (cmd, PowerShell, Windows Terminal behaviour, paths, credential manager).",
+      "positive": "Shift+Up does nothing in Windows Terminal but works on Linux.",
+      "negative": "Env block says 'Windows Terminal' but the bug is a rebase logic error reproducible on any OS."
+    },
+    "performance": {
+      "kind": "area", "color": "fbca04",
+      "definition": "Slowness, high CPU/memory, long refreshes, latency regressions.",
+      "positive": "Every refresh takes 600ms more since v0.55 on a large repo.",
+      "negative": "lazygit freezes forever on startup (a hang is a bug, not just slowness, unless timing-related)."
+    },
+    "credentials": {
+      "kind": "area", "color": "c5def5",
+      "definition": "Authentication: SSH keys/passphrases, HTTPS credentials, GPG signing prompts.",
+      "positive": "Push hangs waiting for an SSH passphrase that is never shown.",
+      "negative": "Push fails because the remote branch was deleted."
+    },
+    "git-config": {
+      "kind": "area", "color": "e4e669",
+      "definition": "Interaction with the user's git configuration (gitconfig options, hooks, aliases, core.* settings).",
+      "positive": "lazygit ignores my core.hooksPath setting.",
+      "negative": "lazygit's own config.yml option is not applied (that is lazygit config, not git-config)."
+    },
+    "installation": {
+      "kind": "area", "color": "0e8a16",
+      "definition": "Installing, packaging, or distribution channels (apt, brew, choco, scoop, nix, releases).",
+      "positive": "Chocolatey package is three versions behind the latest release.",
+      "negative": "After installing, the diff panel is empty (that is a runtime bug)."
+    },
+    "i18n": {
+      "kind": "area", "color": "5319e7",
+      "definition": "Translations, localisation, non-ASCII/CJK text handling in lazygit's UI strings.",
+      "positive": "Japanese translation of the commit menu is wrong.",
+      "negative": "Issue is written in Chinese but describes a crash unrelated to text (use needs-triage, not i18n)."
+    },
+    "UI": {
+      "kind": "area", "color": "1d76db",
+      "definition": "Layout, rendering, colours, panels, keybinding presentation in the terminal UI.",
+      "positive": "Status panel text overlaps the border at narrow widths.",
+      "negative": "Keypress triggers the wrong git command (logic bug, not presentation)."
+    },
+    "usability": {
+      "kind": "area", "color": "c2e0c6",
+      "definition": "Workflow is confusing or awkward though technically working.",
+      "positive": "It is unclear which key aborts an interactive rebase.",
+      "negative": "Abort key does nothing (that is a bug)."
+    },
+    "compatibility": {
+      "kind": "area", "color": "f9d0c4",
+      "definition": "Specific terminal emulators, shells, git versions, or other tools (tmux, Konsole, zsh, old git).",
+      "positive": "Keybindings stop working inside Konsole only.",
+      "negative": "Keybindings stop working everywhere after upgrade."
+    },
+    "needs-info": {
+      "kind": "status", "color": "ededed",
+      "definition": "Bug report lacks repro steps, version, or OS/terminal, or is on a version far behind latest.",
+      "positive": "'It keeps failing with index.lock' with no version, OS, or steps.",
+      "negative": "Clear steps, version v0.56, OS and terminal given."
+    },
+    "possible-duplicate": {
+      "kind": "status", "color": "cfd3d7",
+      "definition": "An earlier issue appears to describe the same root symptom; a maintainer confirms.",
+      "positive": "Same crash stack on bare repo as an earlier open issue.",
+      "negative": "Both mention 'rebase' but describe different failures."
+    },
+    "needs-triage": {
+      "kind": "status", "color": "e99695",
+      "definition": "The bot is unsure, the issue is not in English, possibly for another project, or junk. A human decides.",
+      "positive": "Body is a single word, or describes a different tool's behaviour.",
+      "negative": "A clear bug where only the area label was uncertain (still label the type)."
+    }
+  }
+}
